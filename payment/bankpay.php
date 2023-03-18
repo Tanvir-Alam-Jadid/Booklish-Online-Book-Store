@@ -67,7 +67,7 @@
                 
             </div>
             <input type="submit" value="Login" id="back-btn" class="normal">
-            <input value="Go back" id="back-btn" class="normal" onclick="window.location.href='../pages/ptype.html';">
+            <input value="Go back" id="back-btn" class="normal" onclick="window.location.href='../pages/ptype.php';">
         </form>
 
     </div>

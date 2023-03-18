@@ -84,7 +84,7 @@
         </div>
 
         <input type="submit" value="Proceed to Checkout" id="submit-btn" class="normal">
-        <button class="normal" onclick="window.location.href='../pages/ptype.html';" id="back-btn">Go Back</button>
+        <button class="normal" onclick="window.location.href='../pages/ptype.php';" id="back-btn">Go Back</button>
 
     </div>
     </section>

@@ -1,3 +1,37 @@
+<?php
+session_start();
+error_reporting(0);
+include('../database/dbconnect.php');
+
+if (isset($_POST['Login'])) {
+  $Email = $_POST['Email'];
+  $Password = $_POST['Password'];
+  $query = mysqli_query($con, "select UserID from signup where  email='$Email' && pass='$Password' ");
+  $ret = mysqli_fetch_array($query);
+  if ($ret > 0) {
+    $_SESSION['uid'] = $ret['UserID'];
+    header('location:../pages/shop.php');
+  } else {
+    $msg = "Invalid Details.";
+  }
+}
+
+if (isset($_POST['signup'])) {
+  $uname = $_POST['username'];
+  $e_mail = $_POST['email'];
+  $psw = $_POST['password'];
+
+  $query1 = mysqli_query($con, "insert into signup(username,email,pass) 
+                                values ('$uname','$e_mail','$psw')");
+  if ($query1) {
+    echo "<script>alert('Signed Up Successfully');</script>";
+    header('location:login.php');
+  } else {
+    $msg = "Something Went Wrong. Please try again.";
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,39 +49,44 @@
 </head>
 
 <body>
-    <section id="header">
-    <a href="../index.html/index.html"><img src="../img/Hlogo.png" class="logo" alt="" /></a>
 
-    <div>
+    <section id="header">
+     <a href="../index.php"><img src="../img/Hlogo.png" class="logo" alt="" /></a>
+
+      <div>
         <ul id="navbar">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/pages/shop.html">Shop</a></li>
-        <li><a href="/pages/about.html">About</a></li>
-        <li><a href="/pages/contact.html">Contact</a></li>
-        <li><a href="/pages/sorder.html">Special Order</a></li>
-        <li><a class="active" href="/login/login.html">Login</a></li>
-        <li><a href="/pages/cart.html"><i class="fa fa-shopping-bag"></i></a></li>
+        <li><a href="../index.php">Home</a></li>
+        <li><a href="../pages/shop.php">Shop</a></li>
+        <li><a href="../pages/about.php">About</a></li>
+        <li><a href="../pages/contact.php">Contact</a></li>
+        <li><a href="../pages/sorder.php">Special Order</a></li>
+        <li><a class="active" href="login.php">Login</a></li>
+        <li><a href="../pages/cart.php"><i class="fa fa-shopping-bag"></i></a></li>
         </ul>
-    </div>
+      </div>
     </section>
 
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form action="#" class="sign-in-form" method="post">
             <h2 class="title">Sign in</h2>
+
+            <h6 style="font-size:16px;margin-top:15px;margin-bottom:2px;color:red" align="center"> <?php if ($msg) {
+                                                                                                    echo $msg;
+                                                                                                  }  ?> </h6>
 
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
+              <input type="email" name='Email' placeholder="Email" />
+          </div>
 
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" name='Password' placeholder="Password" />
             </div>
 
-            <input type="submit" value="Login" class="btn solid" />
+            <input type="submit" value="Login" name='Login' class="btn solid" />
             <p class="social-text">Or Sign in with social platforms</p>
 
             <div class="social-media">
@@ -66,25 +105,25 @@
             </div>
           </form>
 
-          <form action="#" class="sign-up-form">
+          <form class="sign-up-form" method="post">
             <h2 class="title">Sign up</h2>
 
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" name='username' placeholder="Username" />
             </div>
 
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" name='email' placeholder="Email" />
             </div>
 
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" name='password' placeholder="Password" />
             </div>
 
-            <input type="submit" class="btn" value="Sign up" />
+            <input type="submit" class="btn" name="signup" value="Sign up" />
             <p class="social-text">Or Sign up with social platforms</p>
 
             <div class="social-media">
@@ -132,7 +171,7 @@
     <section id="banner" class="section-m1">
       <h4>Free Shipping</h4>
       <h2>Up to <span> 5 km </span> - Free Shipping</h2>
-      <button class="normal" onclick="window.location.href='shop.html';">Explore More</button>
+      <button class="normal" onclick="window.location.href='shop.php';">Explore More</button>
     </section>
 
     <section id="feature" class="section-p1">
@@ -161,61 +200,9 @@
       </div>
     </section>
 
-    <footer class="section-p1">
-      <div class="column">
-          <img class="flogo" loading="lazy" src="../img/logo.png" alt="">
-          <h4>Contact</h4>
-          <p><strong> Adress: </strong> Shop No.3, GEC, Chittagong </p>
-          <p> <strong>Phones: </strong> +880-1711223344</p>
-          <p><strong>houres: </strong> 09.00am - 11.00pm</p>
-
-          <div class="follow">
-              <h4>Follow us</h4>
-              <div class="icon">
-                  <i class="fab fa-facebook"></i>
-                  <i class="fab fa-twitter"></i>
-                  <i class="fab fa-instagram"></i>
-                  <i class="fab fa-youtube"></i>
-              </div>
-          </div>
-      </div>
-
-      <div class="column">
-          <h4>About</h4>
-          <a href="#">About Us</a>
-          <a href="#">Delivery Information</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Condition</a>
-          <a href="#">Contact Us</a>
-      </div>
-
-
-      <div class="column">
-          <h4>My Account</h4>
-          <a href="#">Sign in</a>
-          <a href="#">View Cart</a>
-          <a href="#">My Wishlist</a>
-          <a href="#">Track My order</a>
-          <a href="#">Help</a>
-      </div>
-
-
-      <div class="column install">
-          <h4>Install App</h4>
-          <p>From App store or Google Play</p>
-          <div class="row">
-              <img loading="lazy" src="../img/pay/app.jpg" alt="">
-              <img loading="lazy" src="../img/pay/play.jpg" alt="">
-          </div>
-          <p>Secured Payment Gateway</p>
-          <img loading="lazy" src="../img/pay/pay.png" alt="">
-      </div>
-
-
-      <div class="copyright">
-          <p>© 2023, Department of CSE, Port City International University</p>
-      </div>
-  </footer>
+    <?php
+  include('../footer/footer.php');
+  ?>
 
     <script src="login.js"></script>
 </body>

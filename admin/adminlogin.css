@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Spartan', sans-serif;	
+}
+
+input {
+    color: var(--light);
+  }
+  ::-ms-reveal {
+    filter: invert(100%);
+  }
+
+span{
+    color: var(--deep);
+}
+
+#middle {
+    background-image: url("../img/background.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    align-items: flex-start;
+    position: relative;
+    isolation: isolate;
+}
+
+#middle::after {
+    /* background-image: linear-gradient(rgba(26, 33, 39, 1),rgba(51, 75, 99, 1)); */
+    background-color: var(--nevbar);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    align-items: flex-start;
+    content: '';
+    position: absolute;
+    opacity: .7;
+    z-index: -1;
+    bottom: 0;
+}
+#middle img{
+	padding-top: 105px;
+	padding-left: 30px;
+}
+:root{
+    --deep: #7c5c2c;
+    --deep-light: #ceb089;
+    --light: #e3ded8;
+    --blue-hue: #334B63;
+    --nevbar: #1A2127;
+}
+
+.login-box {
+	width: 350px;
+	position: absolute;
+	top: 50%;
+	left: 75%;
+	transform: translate(-50%, -50%);
+	color: var(--light);
+}
+
+.login-box h1 {
+	float: left;
+	font-size: 40px;
+	border-bottom: 4px solid var(--light);
+	margin-bottom: 50px;
+	padding: 13px;
+}
+
+.textbox {
+	width: 100%;
+	overflow: hidden;
+	font-size: 20px;
+	padding: 8px 0;
+	margin: 8px 0;
+	border-bottom: 1px solid var(--light);
+}
+
+.fa {
+	width: px;
+	float: left;
+	text-align: center;
+}
+
+.textbox input {
+	border: none;
+	outline: none;
+	background: transparent;
+	font-size: 18px;
+	float: left;
+	margin: 0 10px;
+}
+
+.button {
+	width: 100%;
+	padding: 8px;
+	color: var(--light);
+	background-color: var(--deep);
+	border: 2px solid var(--deep);
+	border-radius: 20px;
+	font-size: 18px;
+	cursor: pointer;
+	margin: 12px 0;
+    font-weight: bolder;
+}
+
+.button:hover {
+	width: 100%;
+	padding: 8px;
+	color: var(--light);
+	background-color: transparent;
+	border: 2px solid var(--light);
+	border-radius: 20px;
+	font-size: 18px;
+	cursor: pointer;
+	margin: 12px 0;
+    transition: .5s ease;
+}
+
+
+.text{
+	display: flex;
+	align-items: center;
+
+}

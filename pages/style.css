@@ -698,39 +698,38 @@ footer .copyright {
     font-size: 18px;
 }
 
+#sbutton button{
+    background-color: transparent;
+    color: var(--nevbar);
+    border: none;
+    padding: 20px;
+}
+
 .search_wrap .search_box .btn {
     position: absolute;
     top: 0;
     right: 0;
     width: 60px;
     height: 100%;
-    background: #7c5c2c;
+    background: var(--deep-light);
     z-index: 1;
     cursor: pointer;
 }
 
 .search_wrap .search_box .btn:hover {
-    background: #ceb089;
+    background: var(--deep);
     transition: 0.3s ease
 }
 
 .search_wrap .search_box .btn.btn_common .fas {
+    background-color: transparent;
+    border: none;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 20px;
-}
-.search_wrap .search_box .btn.btn_common .fas:hover {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background: #ceb089;
     transform: translate(-50%, -50%);
     color: #222;
     font-size: 20px;
-    transition: 0.3s ease
 }
 
 .search_wrap.search_wrap_3 .search_box .input {
