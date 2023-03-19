@@ -1,0 +1,32 @@
+h1{
+    font-family:'Arial Black',Garamond;
+    font-weight:bold;
+    font-size:84px;
+    text-align: center;
+  }
+  img{
+    height:75%;
+    width:50%;
+    
+  }
+  h2{
+    font-family: 'Lucida Grand',Garamond;
+   font-size:84px;
+    font-weight:bold;
+    padding-left:20px;
+    text-align:center;
+  }
+  h3{
+    font-family:'Lucida Bright';
+    text-align:center;
+    font-size:36px;
+    font-weight:normal;
+  }
+  button{
+    background-color:green;
+    border:none;
+    color: white;
+    padding: 15px 32px;
+    margin:auto;
+    display:block;
+  }

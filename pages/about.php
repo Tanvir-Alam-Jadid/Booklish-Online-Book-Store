@@ -56,7 +56,7 @@
     </section>
 
     <section id="about-app" class="section-p1">
-        <h1>Download Our <span><button onclick="window.location.href='downloadpage.html';">App</button></span></h1>
+        <h1>Download Our <span><button onclick="window.location.href='../error/error.php';">App</button></span></h1>
         <div class="video">
             <video autoplay muted loop src="../img/videos/download app.mp4"></video>
         </div>

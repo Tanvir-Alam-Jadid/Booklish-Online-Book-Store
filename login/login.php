@@ -171,7 +171,7 @@ if (isset($_POST['signup'])) {
     <section id="banner" class="section-m1">
       <h4>Free Shipping</h4>
       <h2>Up to <span> 5 km </span> - Free Shipping</h2>
-      <button class="normal" onclick="window.location.href='shop.php';">Explore More</button>
+      <button class="normal" onclick="window.location.href='../pages/shop.php';">Explore More</button>
     </section>
 
     <section id="feature" class="section-p1">

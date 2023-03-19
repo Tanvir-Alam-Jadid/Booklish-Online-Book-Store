@@ -12,7 +12,7 @@ include('database/dbconnect.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <!--favicon-->
-    <link rel="shortcut icon" type="image/png" href="../Booklish//img/favicon/512 x 512.png"/>
+    <link rel="shortcut icon" type="image/png" href="img/favicon/512 x 512.png"/>
     <!--favicon end-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"/>
 
@@ -43,7 +43,7 @@ include('database/dbconnect.php');
             <h2>Order Books Online From</h2>
             <h1>booklish</h1>
             <p>Save more time & get free shipping up to 5 km!</p>
-            <button onclick="window.location.href='#';">Shop now</button>
+            <button onclick="window.location.href='pages/shop.php';">Shop now</button>
         </section>
 
         <section id="feature" class="section-p1">
@@ -120,7 +120,7 @@ include('database/dbconnect.php');
         <section id="banner" class="section-m1"> 
             <h4>Free Shipping</h4>  
             <h2>Up to <span> 5 km </span> - Free Shipping</h2>
-            <button class="normal" onclick="window.location.href='#';">Explore More</button>
+            <button class="normal" onclick="window.location.href='pages/shop.php';">Explore More</button>
         </section>
 
         <section id="product1" class="section-p1">
@@ -175,13 +175,13 @@ include('database/dbconnect.php');
                 <h4>special books</h4>
                 <h2>get free delivary up to 5 km</h2>
                 <span>Rare limited time stocks are available at booklish</span>
-                <button class="white" onclick="window.location.href='#';">Learn More</button>
+                <button class="white" onclick="window.location.href='pages/about.php';">Learn More</button>
             </div>
             <div class="banner-box banner-box2">
                 <h4>be wise</h4>
                 <h2>order books from booklish</h2>
                 <span>Rare books from well known authors</span>
-                <button class="white" onclick="window.location.href='#';">Learn More</button>
+                <button class="white" onclick="window.location.href='pages/about.php';">Learn More</button>
             </div>
         </section>
 
@@ -193,7 +193,7 @@ include('database/dbconnect.php');
             </div> 
             <div class="form">
             <input type="text" placeholder="Your email address">
-            <button class="normal" onclick="window.location.href='#';">Sign Up</button>
+            <button class="normal" onclick="window.location.href='login/login.php';">Sign Up</button>
             </div>
         </section>
 

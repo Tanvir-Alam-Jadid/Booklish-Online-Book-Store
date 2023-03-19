@@ -20,9 +20,9 @@
     <div class="column">
         <h4>About</h4>
         <a href="about.php">About Us</a>
-        <a href="#">Delivery Information</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Condition</a>
+        <a href="../error/error.php">Delivery Information</a>
+        <a href="../error/error.php">Privacy Policy</a>
+        <a href="../error/error.php">Terms & Condition</a>
         <a href="contact.php">Contact Us</a>
     </div>
 
@@ -31,7 +31,7 @@
         <h4>My Account</h4>
         <a href="../login/login.php">Sign in</a>
         <a href="cart.php">View Cart</a>
-        <a href="#">Track My order</a>
+        <a href="../error/error.php">Track My order</a>
         <a href="contact.php">Help</a>
         <a href="../admin/adminlogin.php">Admin Panel</a>
     </div>
