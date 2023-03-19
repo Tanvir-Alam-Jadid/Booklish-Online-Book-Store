@@ -84,12 +84,14 @@ include('../database/dbconnect.php');
             <h4><?php echo $result1['MName']; ?></h4>
             <h5><strike>Regular Price: ৳ <?php echo $result1['Discount']; ?></strike></h5>
             <h2>Discount Price: ৳ <?php echo $result1['Price']; ?></h2>
-                <select>
+                
+            <!-- <select>
                     <option>Select Amount</option>
                     <option>1pcs</option>
                     <option>2pcs</option>
                     <option>3pcs</option>
-                </select>
+            </select> -->
+
             <form method="post">
                 <button name='addtocart' class="normal">Add to Cart</button>
             </form>

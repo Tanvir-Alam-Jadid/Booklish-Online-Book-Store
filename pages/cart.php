@@ -90,50 +90,6 @@ include('../database/dbconnect.php');
         </section>
     </form>
 
-    <!-- <section id="cart" class="section-p1">
-        <table width="100%">
-            <thead>
-                <tr>
-                    <td>Remove</td>
-                    <td>Image</td>
-                    <td>Product</td>
-                    <td>Price</td>
-                    <td>Quantity</td>
-                    <td>Subtotal</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="#"><i class="fal fa-times-circle"></i></a></td>
-                    <td><img src="../img/products/slow-down.jpg" alt=""></td>
-                    <td>Slow Down</td>
-                    <td>৳1540</td>
-                    <td><input type="number" value="1"></td>
-                    <td>৳1540</td>
-                </tr>
-
-                <tr>
-                    <td><a href="#"><i class="fal fa-times-circle"></i></a></td>
-                    <td><img src="../img/products/vegetarian-salad-dinner.jpg" alt=""></td>
-                    <td>Vegetarian Salad for Dinner</td>
-                    <td>৳980</td>
-                    <td><input type="number" value="1"></td>
-                    <td>৳980</td>
-                </tr>
-
-                <tr>
-                    <td><a href="#"><i class="fal fa-times-circle"></i></a></td>
-                    <td><img src="../img/products/over-and-under-the-snow.jpg" alt=""></td>
-                    <td>Over & Under the Snow</td>
-                    <td>৳1230</td>
-                    <td><input type="number" value="1"></td>
-                    <td>৳1230</td>
-                </tr>
-            </tbody>
-        </table>
-    </section> -->
-
-
     <section id="cart-add" class="section-p1">
         <div id="coupon">
             <h3>Apply Coupon</h3>
