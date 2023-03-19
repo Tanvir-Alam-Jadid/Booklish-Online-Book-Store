@@ -201,7 +201,7 @@ body{
 
 .details{
     position: relative;
-    width: 100%;
+    width: 150%;
     padding: 20px;
     display: grid;
     grid-template-columns: 2fr 1fr;

@@ -107,6 +107,7 @@ $mysqli->close();
                             <tr>
                                 <td>Name</td> 
                                 <td>Email</td> 
+                                <td>Subject</td>
                                 <td>Message</td> 
                             </tr>
                         </thead>
